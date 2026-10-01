@@ -178,4 +178,4 @@ window.DEVIS = {
   ],
 };
 
-window.DEVIS_SITE = { static: true, form: "https://formsubmit.co/ajax/direction@otomeo.com" };
+window.DEVIS_SITE = { static: true, form: "https://formsubmit.co/ajax/direction@otomeo.com", api: "https://devis-kelassy-api-production.up.railway.app" };

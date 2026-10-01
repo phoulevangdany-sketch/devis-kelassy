@@ -332,7 +332,8 @@
   }
 
   // ---------------------------------------------------------------- 8. décision
-  const SITE = window.DEVIS_SITE || {}; // { static: true, form: 'https://formsubmit.co/ajax/…' } sur GitHub Pages
+  const SITE = window.DEVIS_SITE || {}; // { static: true, form: 'https://formsubmit.co/ajax/…', api: 'https://…' } sur GitHub Pages
+  const API = SITE.api || ''; // serveur de l'assistant quand la page est publiée ailleurs
   const ACKS = [
     ['perimetre', 'J’ai pris connaissance de ce que comprend le logiciel et de ce qui n’y est pas compris.'],
     ['conditions', 'J’ai lu les conditions et l’échéancier (à la signature : 50 % du logiciel, le logo, le site, le domaine et les e-mails ; le solde du logiciel à la livraison).'],
@@ -590,7 +591,7 @@
     add('me', esc(text)); chat.history.push({ role: 'user', content: text });
     const typing = add('bot msg--typing', '…');
     try {
-      const res = await fetch('/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: chat.history.slice(-11) }) });
+      const res = await fetch(API + '/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: chat.history.slice(-11) }) });
       if (!res.ok || !res.body) { chat.history.pop(); typing.remove(); if (res.status === 503) { chat.ok = false; off(); } else add('bot', md(res.status === 429 ? 'Beaucoup de questions en peu de temps : réessayez dans quelques minutes.' : 'Je n’ai pas pu répondre. Réessayez dans un instant.')); return; }
       const rd = res.body.getReader(), dec = new TextDecoder(); let acc = '', el = null;
       for (;;) { const { done: d, value } = await rd.read(); if (d) break; acc += dec.decode(value, { stream: true }); if (!el && acc.trim()) { typing.remove(); el = add('bot', ''); } if (el) { el.innerHTML = md(acc); $('#chat-log').scrollTop = 1e9; } }
@@ -625,8 +626,8 @@
     renderNeeds(); renderTool(); renderRoutes(); renderTour(); renderFilms(); renderPaths();
     renderOptions(); renderDelai(); renderPrice(); renderDecision(); renderFine();
     mountVoices(); update(); initNav(); rise(); autoClips();
-    if (SITE.static) { chat.ok = false; $('#fab').hidden = true; } // pas d'assistant sans serveur
-    else fetch('/api/health').then((r) => r.json()).then((h) => { chat.ok = !!h.chat; if (!h.chat && chat.greeted) off(); }).catch(() => { chat.ok = false; });
+    if (SITE.static && !SITE.api) { chat.ok = false; $('#fab').hidden = true; } // pas d'assistant sans serveur
+    else fetch(API + '/api/health').then((r) => r.json()).then((h) => { chat.ok = !!h.chat; if (!h.chat && chat.greeted) off(); }).catch(() => { chat.ok = false; });
     $('#fab').addEventListener('click', () => openChat());
     $('#chat-close').addEventListener('click', closeChat);
     const input = $('#chat-input');
