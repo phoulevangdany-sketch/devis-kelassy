@@ -1,0 +1,86 @@
+{
+ "resume": {
+  "duree": 36.9
+ },
+ "besoins": {
+  "duree": 23.5
+ },
+ "outil": {
+  "duree": 31.7
+ },
+ "s_kanban": {
+  "duree": 20.7
+ },
+ "s_fiche": {
+  "duree": 21.6
+ },
+ "s_echeances": {
+  "duree": 21.2
+ },
+ "s_financement": {
+  "duree": 19.7
+ },
+ "s_planning": {
+  "duree": 18.2
+ },
+ "s_emargement": {
+  "duree": 20.1
+ },
+ "s_prospection": {
+  "duree": 19.3
+ },
+ "s_pilotage": {
+  "duree": 16.4
+ },
+ "au_apprentissage": {
+  "duree": 22.5
+ },
+ "au_cpf": {
+  "duree": 21.9
+ },
+ "au_france_travail": {
+  "duree": 21.5
+ },
+ "au_entreprise": {
+  "duree": 19.5
+ },
+ "au_particulier": {
+  "duree": 15.6
+ },
+ "o_matching": {
+  "duree": 24.9
+ },
+ "o_agent_commercial": {
+  "duree": 17.0
+ },
+ "o_agent_dossiers": {
+  "duree": 17.2
+ },
+ "o_agent_financements": {
+  "duree": 17.8
+ },
+ "o_agent_suivi": {
+  "duree": 18.0
+ },
+ "o_assistant_portails": {
+  "duree": 17.1
+ },
+ "o_telegram": {
+  "duree": 17.8
+ },
+ "o_documents": {
+  "duree": 16.8
+ },
+ "o_abonnements": {
+  "duree": 21.8
+ },
+ "delai": {
+  "duree": 23.5
+ },
+ "investissement": {
+  "duree": 26.1
+ },
+ "decision": {
+  "duree": 15.6
+ }
+}

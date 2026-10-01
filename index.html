@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kelassy Academy · Votre projet</title>
+<meta name="description" content="Kelassy Academy : votre futur logiciel Odoo, expliqué simplement. Devis n° 2026-003 préparé par Otomeo.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="assets/img/favicon-otomeo.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/Inter-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script src="devis-data.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="bar" id="bar">
+  <div class="bar__in">
+    <a class="bar__brand" href="#top" aria-label="Retour en haut"><img src="assets/img/logo-otomeo-horizontal-fond-clair.svg" alt="Otomeo" width="104" height="26"></a>
+    <span class="bar__doc"><img src="assets/img/kelassy-logo.svg" alt="Kelassy Academy" width="96" height="27"><em>Devis n° 2026-003</em></span>
+    <div class="bar__step" aria-hidden="true"><span id="bar-step">Votre projet</span><i><b id="bar-progress"></b></i></div>
+    <a class="btn btn--sm" href="#decision">Valider</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================================================== Accueil -->
+  <section class="hero" id="top">
+    <div class="wrap hero__in">
+      <h1><span class="hero__kicker">KELASSY ACADEMY</span>Voici votre projet, expliqué simplement.</h1>
+      <p class="hero__lead">Un seul logiciel pour toutes vos activités de formation. Il connaît les étapes de chaque financement, vous rappelle quoi faire au bon moment et garde les preuves.</p>
+      <div class="hero__voice" data-voice="resume" data-label="Écouter le résumé"></div>
+      <dl class="facts">
+        <div><dt>Le logiciel</dt><dd>Odoo, à votre nom</dd></div>
+        <div><dt>Le délai</dt><dd>1 mois à 45 jours</dd></div>
+        <div><dt>L’investissement</dt><dd>6 000 € <small>TTC</small></dd></div>
+      </dl>
+    </div>
+    <figure class="hero__shot wrap">
+      <button class="shot shot--hero" type="button" data-zoom="dossiers-apprentissage" aria-label="Agrandir la capture d’Odoo">
+        <picture>
+          <source media="(max-width: 640px)" srcset="media/odoo/dossiers-apprentissage-mobile.webp">
+          <img src="media/odoo/dossiers-apprentissage-desktop.webp" alt="Odoo : les dossiers d’apprentissage rangés en colonnes par étape" width="1600" height="900" fetchpriority="high">
+        </picture>
+      </button>
+      <figcaption>Votre futur écran, en vrai : Odoo, configuré pour Kelassy. Les noms sont fictifs.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ===================================================== 1. Besoins -->
+  <section class="sec" id="besoins" data-step="Vos besoins">
+    <div class="wrap">
+      <header class="sec__head">
+        <p class="sec__num">01</p>
+        <h2>Ce que vous nous avez demandé</h2>
+        <div data-voice="besoins"></div>
+      </header>
+      <div class="needs" id="needs"></div>
+      <p class="note" id="needs-note"></p>
+    </div>
+  </section>
+
+  <!-- ===================================================== 2. Outil -->
+  <section class="sec sec--tint" id="outil" data-step="Votre futur outil">
+    <div class="wrap">
+      <header class="sec__head">
+        <p class="sec__num">02</p>
+        <h2>Un seul logiciel, toutes vos activités</h2>
+        <p class="sec__lead" id="outil-phrase"></p>
+        <div data-voice="outil"></div>
+      </header>
+      <div class="tool">
+        <div class="tool__apps" id="tool-apps"></div>
+        <figure class="tool__shot">
+          <button class="shot" type="button" data-zoom="accueil" aria-label="Agrandir l’écran d’accueil d’Odoo">
+            <picture>
+              <source media="(max-width: 640px)" srcset="media/odoo/accueil-mobile.webp">
+              <img src="media/odoo/accueil-desktop.webp" alt="Odoo : l’écran d’accueil avec les applications Prospection, Dossiers, Formation, Discussion, Calendrier, Contacts" width="960" height="600" loading="lazy">
+            </picture>
+          </button>
+          <figcaption>L’écran d’accueil : une icône par application.</figcaption>
+        </figure>
+      </div>
+      <div class="routes" id="routes"></div>
+    </div>
+  </section>
+
+  <!-- ===================================================== 3. Fonctionnement -->
+  <section class="sec" id="fonctionnement" data-step="Comment il fonctionnera">
+    <div class="wrap">
+      <header class="sec__head">
+        <p class="sec__num">03</p>
+        <h2>Votre journée dans Odoo</h2>
+        <p class="sec__lead">Huit écrans réels, à parcourir. Les numéros expliquent ce que vous voyez.</p>
+      </header>
+      <div class="tour" id="tour"></div>
+      <div class="films" id="films"></div>
+    </div>
+  </section>
+
+  <!-- ===================================================== 4. Automatisations -->
+  <section class="sec sec--tint" id="automatisations" data-step="Ce qu’il fera pour vous">
+    <div class="wrap">
+      <header class="sec__head">
+        <p class="sec__num">04</p>
+        <h2>Ce que le logiciel fera pour vous</h2>
+        <p class="sec__lead">Chaque financement a ses étapes, ses pièces et ses délais. Choisissez-en un.</p>
+      </header>
+      <div class="paths" id="paths"></div>
+      <p class="caution">Le logiciel vous aide à structurer vos dossiers, à respecter les délais et à conserver les preuves. Il ne garantit pas à lui seul votre conformité : les règles sont validées avec vous et votre conseil.</p>
+    </div>
+  </section>
+
+  <!-- ===================================================== 5. Options -->
+  <section class="sec" id="options" data-step="Les options">
+    <div class="wrap">
+      <header class="sec__head">
+        <p class="sec__num">05</p>
+        <h2>Les options, si vous le souhaitez</h2>
+        <p class="sec__lead">Rien n’est imposé. Ajoutez ce qui vous sert, maintenant ou plus tard, au même prix pendant la validité du devis.</p>
+      </header>
+      <div id="opts"></div>
+    </div>
+  </section>
+
+  <!-- ===================================================== 6. Délai -->
+  <section class="sec sec--tint" id="delai" data-step="Le délai">
+    <div class="wrap">
+      <header class="sec__head">
+        <p class="sec__num">06</p>
+        <h2 class="big" id="delai-titre"></h2>
+        <p class="sec__lead" id="delai-sous"></p>
+        <div data-voice="delai"></div>
+      </header>
+      <ol class="phases" id="phases"></ol>
+      <p class="note note--strong" id="delai-condition"></p>
+    </div>
+  </section>
+
+  <!-- ===================================================== 7. Investissement -->
+  <section class="sec" id="investissement" data-step="L’investissement">
+    <div class="wrap">
+      <header class="sec__head">
+        <p class="sec__num">07</p>
+        <h2>L’investissement</h2>
+        <div data-voice="investissement"></div>
+      </header>
+      <div class="price" id="price"></div>
+    </div>
+  </section>
+
+  <!-- ===================================================== 8. Décision -->
+  <section class="sec sec--decision" id="decision" data-step="Votre décision">
+    <div class="wrap wrap--narrow">
+      <header class="sec__head sec__head--center">
+        <p class="sec__num">08</p>
+        <h2>Votre décision</h2>
+        <p class="sec__lead">Validez le devis en ligne, ou posez d’abord une question. Dany Phoulevang reçoit votre message tout de suite.</p>
+        <div data-voice="decision"></div>
+      </header>
+      <div class="decide" id="decide"></div>
+    </div>
+  </section>
+
+  <section class="fine wrap" id="conditions">
+    <details class="fold"><summary>Les conditions du devis</summary><div id="terms"></div></details>
+    <details class="fold"><summary>Les points à confirmer ensemble au cadrage</summary><ul id="confirm"></ul></details>
+    <details class="fold"><summary>Nos engagements</summary><div class="guar" id="guar"></div></details>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <img src="assets/img/logo-otomeo-horizontal-fond-sombre.svg" alt="Otomeo" width="112" height="28">
+    <p>Devis n° 2026-003 du 1er octobre 2026, valable jusqu’au 31 octobre 2026. Il annule et remplace le devis n° 2026-002.</p>
+    <p>CPL CONSULTING SAS, exploitée sous la marque Otomeo · 28 Avenue du Général de Gaulle, 94190 Villeneuve-Saint-Georges · SAS au capital de 1&#8239;000&nbsp;€ · RCS Créteil 992 212 324 · SIRET 99221232400014 · TVA FR21 992 212 324 · contact@otomeo.com</p>
+    <p class="foot__small">Les écrans présentés sont de vraies captures d’Odoo, configuré pour la démonstration avec des données fictives.</p>
+  </div>
+</footer>
+
+<!-- Sélection en cours -->
+<div class="tray" id="tray" aria-live="polite">
+  <span class="tray__l">Votre sélection</span>
+  <strong id="tray-total">6&#8239;000&nbsp;€</strong>
+  <span class="tray__m" id="tray-month"></span>
+  <a class="btn btn--sm" href="#decision">Valider</a>
+</div>
+
+<!-- Visionneuse -->
+<div class="zoom" id="zoom" hidden role="dialog" aria-modal="true" aria-label="Capture agrandie">
+  <button class="zoom__close" type="button" id="zoom-close" aria-label="Fermer">×</button>
+  <img id="zoom-img" alt="">
+  <video id="zoom-vid" controls loop playsinline hidden></video>
+</div>
+
+<!-- Assistant -->
+<button class="fab" id="fab" type="button" aria-controls="chat" aria-expanded="false">
+  <img src="assets/img/symbole-oo-fond-clair.svg" alt="" width="24" height="24"><span>Une question&nbsp;?</span>
+</button>
+<section class="chat" id="chat" role="dialog" aria-labelledby="chat-title" hidden>
+  <header class="chat__head">
+    <img src="assets/img/symbole-oo-fond-clair.svg" alt="" width="28" height="28">
+    <div><h2 id="chat-title">Une question sur votre projet&nbsp;?</h2><p>Assistant IA · il répond à partir du devis et de votre cahier des charges</p></div>
+    <button class="chat__close" type="button" id="chat-close" aria-label="Fermer l’assistant">×</button>
+  </header>
+  <div class="chat__log" id="chat-log" aria-live="polite"></div>
+  <form class="chat__form" id="chat-form">
+    <label class="sr-only" for="chat-input">Votre question</label>
+    <textarea id="chat-input" rows="1" maxlength="1500" placeholder="Posez votre question…"></textarea>
+    <button type="submit" class="chat__send" aria-label="Envoyer">↑</button>
+  </form>
+  <p class="chat__legal">Réponses produites par une IA à partir du devis : en cas de doute, le devis fait foi. Vos questions sont conservées par Otomeo pour vous répondre.</p>
+</section>
+</body>
+</html>

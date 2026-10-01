@@ -1,0 +1,490 @@
+{
+ "_source": "research/01 à 04 (sources officielles consultées le 01/10/2026). Règles datées, à valider avec Kelassy et son conseil avant activation.",
+ "dispositifs": [
+  {
+   "code": "apprentissage",
+   "nom": "Apprentissage",
+   "court": "Apprentissage",
+   "une_phrase": "Un jeune signe un contrat avec une entreprise ; Kelassy le forme en tant que CFA.",
+   "payeur": "L'OPCO de l'employeur, en plusieurs versements (40 %, 30 %, 20 %, puis le solde).",
+   "certifications": "Diplômes et titres inscrits au RNCP uniquement (BTS NDRC, titres pro…).",
+   "couleur": "#2563EB",
+   "etapes": [
+    [
+     "Candidature",
+     "Test de positionnement, entretien, décision d'admission."
+    ],
+    [
+     "Recherche d'employeur",
+     "Le jeune peut suivre la formation 3 mois au plus sans employeur ; Kelassy l'aide à en trouver un."
+    ],
+    [
+     "Contrat en préparation",
+     "Convention CFA–employeur et CERFA 10103*14, contrôle du maître d'apprentissage et du niveau de prise en charge."
+    ],
+    [
+     "Transmis à l'OPCO",
+     "L'employeur transmet sous 5 jours ouvrables ; l'OPCO décide sous 20 jours, son silence vaut refus."
+    ],
+    [
+     "Pris en charge",
+     "L'échéancier de paiement de l'OPCO est créé."
+    ],
+    [
+     "En formation",
+     "Période des 45 premiers jours, suivi en entreprise, absences signalées à l'employeur."
+    ],
+    [
+     "Terminé et soldé",
+     "Pièces du solde envoyées dans les 4 mois après la fin, sinon le solde est perdu."
+    ]
+   ],
+   "pieces": [
+    [
+     "Pièce d'identité",
+     "Apprenant"
+    ],
+    [
+     "CV",
+     "Apprenant"
+    ],
+    [
+     "Dernier diplôme obtenu",
+     "Apprenant"
+    ],
+    [
+     "Convention de formation CFA–employeur signée",
+     "Kelassy et employeur"
+    ],
+    [
+     "CERFA 10103*14 signé",
+     "Employeur et apprenant"
+    ],
+    [
+     "Justificatifs du maître d'apprentissage",
+     "Employeur"
+    ],
+    [
+     "Décision de prise en charge de l'OPCO",
+     "OPCO"
+    ]
+   ],
+   "delais": [
+    [
+     "3 mois au plus en formation sans employeur",
+     "L6222-12-1"
+    ],
+    [
+     "Contrat transmis à l'OPCO dans les 5 jours ouvrables après son début",
+     "D6224-1"
+    ],
+    [
+     "Décision de l'OPCO sous 20 jours ; sans réponse, c'est un refus",
+     "R6224-3"
+    ],
+    [
+     "Fin de la période des 45 jours en entreprise",
+     "L6222-18"
+    ],
+    [
+     "Pièces du solde à envoyer dans les 4 mois après la fin",
+     "R6332-25"
+    ]
+   ],
+   "automatismes": [
+    "Le compteur « 3 mois sans employeur » démarre tout seul.",
+    "Rappel pour que l'employeur transmette le contrat à l'OPCO sous 5 jours ouvrables.",
+    "Alerte si l'OPCO n'a pas répondu à 20 jours.",
+    "L'échéancier de l'OPCO (40, 30, 20 % et solde) se crée automatiquement.",
+    "Rien ne peut être facturé à l'apprenti : la formation est gratuite pour lui."
+   ]
+  },
+  {
+   "code": "contrat_pro",
+   "nom": "Contrat de professionnalisation",
+   "court": "Contrat pro",
+   "une_phrase": "Un contrat en alternance proche de l'apprentissage, sans statut de CFA.",
+   "payeur": "L'entreprise, remboursée ensuite par son OPCO (règle en vigueur depuis le 1er octobre 2026).",
+   "certifications": "RNCP ou certificats de branche ; jamais le Répertoire spécifique.",
+   "couleur": "#0EA5E9",
+   "etapes": [
+    [
+     "Candidature",
+     "Positionnement et admission."
+    ],
+    [
+     "Entreprise trouvée",
+     "Poste, tuteur, rythme."
+    ],
+    [
+     "Contrat en préparation",
+     "CERFA 12434*05 et convention."
+    ],
+    [
+     "Transmis à l'OPCO",
+     "Dans les 5 jours suivant le début du contrat."
+    ],
+    [
+     "En formation",
+     "Suivi et assiduité."
+    ],
+    [
+     "Terminé et facturé",
+     "Facture à l'entreprise."
+    ]
+   ],
+   "pieces": [
+    [
+     "Pièce d'identité",
+     "Stagiaire"
+    ],
+    [
+     "CV",
+     "Stagiaire"
+    ],
+    [
+     "CERFA 12434*05 signé",
+     "Entreprise"
+    ],
+    [
+     "Convention de formation signée",
+     "Kelassy et entreprise"
+    ]
+   ],
+   "delais": [
+    [
+     "Contrat transmis à l'OPCO dans les 5 jours suivant son début",
+     "D6325-1"
+    ]
+   ],
+   "automatismes": [
+    "Rappel de transmission à l'OPCO sous 5 jours.",
+    "La facture part vers l'entreprise, pas vers l'OPCO."
+   ]
+  },
+  {
+   "code": "cpf",
+   "nom": "CPF (Mon Compte Formation)",
+   "court": "CPF",
+   "une_phrase": "Une personne paie sa formation avec son compte personnel de formation.",
+   "payeur": "La Caisse des Dépôts, environ 30 jours après la déclaration de fin de formation.",
+   "certifications": "RNCP et Répertoire spécifique (plafond de 1 500 € pour le Répertoire spécifique).",
+   "couleur": "#7C3AED",
+   "etapes": [
+    [
+     "Demande reçue",
+     "Répondre sous 2 jours ouvrés sur la plateforme de la Caisse des Dépôts."
+    ],
+    [
+     "Proposition envoyée",
+     "Le début de formation doit être au moins 11 jours ouvrés plus tard."
+    ],
+    [
+     "Validée par la personne",
+     "Elle valide sous 4 jours et règle sa participation de 150 € (sauf exceptions)."
+    ],
+    [
+     "Entrée à déclarer",
+     "Déclarer l'entrée sous 3 jours ouvrés après le début."
+    ],
+    [
+     "En formation",
+     "Assiduité suivie : elle détermine le paiement en cas d'abandon."
+    ],
+    [
+     "Sortie déclarée",
+     "Sous 3 jours ouvrés après la fin : dates, taux de réalisation. Vaut service fait."
+    ],
+    [
+     "Payé",
+     "Paiement de la Caisse des Dépôts."
+    ]
+   ],
+   "pieces": [
+    [
+     "Programme et prérequis publiés",
+     "Kelassy"
+    ],
+    [
+     "Test de positionnement (si prérequis)",
+     "Kelassy"
+    ],
+    [
+     "Feuilles d'émargement ou relevés de connexion",
+     "Kelassy"
+    ],
+    [
+     "Inscription à l'examen",
+     "Kelassy"
+    ],
+    [
+     "Résultat de l'examen",
+     "Certificateur"
+    ]
+   ],
+   "delais": [
+    [
+     "Répondre à une demande sous 2 jours ouvrés",
+     "CGU EDOF v15"
+    ],
+    [
+     "Début au moins 11 jours ouvrés après la proposition",
+     "CGU EDOF v15"
+    ],
+    [
+     "Déclarer l'entrée et la sortie sous 3 jours ouvrés",
+     "CGU EDOF v15"
+    ],
+    [
+     "Conserver les preuves 4 ans (demandables pendant 5 ans)",
+     "CGU EDOF v15"
+    ]
+   ],
+   "automatismes": [
+    "Alerte si une demande reste 2 jours ouvrés sans réponse.",
+    "Blocage d'une date de début trop proche de la proposition.",
+    "Rappel de déclarer l'entrée et la sortie sous 3 jours ouvrés.",
+    "Alerte d'assiduité sous 25 % et sous 80 %, les seuils qui changent le paiement.",
+    "Aucune prospection de personnes pour le CPF : c'est interdit par la loi."
+   ]
+  },
+  {
+   "code": "france_travail",
+   "nom": "France Travail (POEI, AIF)",
+   "court": "France Travail",
+   "une_phrase": "Un demandeur d'emploi se forme avant une embauche (POEI) ou avec une aide individuelle (AIF).",
+   "payeur": "France Travail, par facture déposée sur Chorus Pro avec un numéro d'engagement.",
+   "certifications": "Selon l'offre d'emploi (POEI) ou le projet de la personne (AIF).",
+   "couleur": "#0E7A46",
+   "etapes": [
+    [
+     "Demande",
+     "Offre d'emploi de l'employeur (POEI) ou demande de la personne (AIF)."
+    ],
+    [
+     "Devis sur Kairos",
+     "Devis et plan de formation détaillé déposés sur Kairos, la plateforme de France Travail."
+    ],
+    [
+     "Accord et convention",
+     "Accord de France Travail, convention signée."
+    ],
+    [
+     "Entrée déclarée",
+     "Entrée déclarée sur Kairos dès le premier jour."
+    ],
+    [
+     "En formation",
+     "Absences déclarées au fil de l'eau, assiduité attestée chaque fin de mois."
+    ],
+    [
+     "Bilan et embauche",
+     "Bilan saisi le lendemain de la fin ; embauche suivie pour la POEI."
+    ],
+    [
+     "Facturé sur Chorus Pro",
+     "Facture avec le numéro d'engagement, sinon elle est rejetée."
+    ],
+    [
+     "Payé",
+     "Paiement de France Travail."
+    ]
+   ],
+   "pieces": [
+    [
+     "Offre d'emploi de l'employeur (POEI)",
+     "Employeur"
+    ],
+    [
+     "Plan de formation détaillé",
+     "Kelassy"
+    ],
+    [
+     "Convention signée",
+     "France Travail, employeur, Kelassy"
+    ],
+    [
+     "Attestations de présence du mois",
+     "Kelassy"
+    ],
+    [
+     "Bilan de fin de formation",
+     "Kelassy"
+    ],
+    [
+     "Justificatif d'embauche (POEI)",
+     "Employeur"
+    ]
+   ],
+   "delais": [
+    [
+     "Déclarer l'entrée sur Kairos dès le premier jour",
+     "France Travail, Kairos (actuformation, 2026)"
+    ],
+    [
+     "Transmettre entrée, interruption et sortie sous 3 jours",
+     "France Travail, Kairos (actuformation, 2026)"
+    ],
+    [
+     "Déclarer les absences du mois avant le 28, sinon la personne est réputée présente",
+     "Guide Kairos des assiduités"
+    ],
+    [
+     "Saisir le bilan dès le lendemain de la fin",
+     "France Travail, Kairos (actuformation, 2026)"
+    ],
+    [
+     "Contrôle possible 4 ans après la fin ; 5 jours ouvrés pour fournir les preuves",
+     "Kit facturation OF France Travail, avril 2026"
+    ]
+   ],
+   "automatismes": [
+    "Kairos n'a pas d'API : le logiciel vous rappelle chaque déclaration au bon jour.",
+    "Les absences du mois sont préparées à partir de l'émargement, avant le 28.",
+    "Rappel du bilan le lendemain de la fin.",
+    "Suivi de l'embauche à la fin de la POEI.",
+    "Contrôle du numéro d'engagement avant le dépôt de la facture."
+   ]
+  },
+  {
+   "code": "entreprise",
+   "nom": "Formation d'entreprise (plan de compétences)",
+   "court": "Entreprises",
+   "une_phrase": "Une entreprise forme ses salariés, souvent avec l'aide de son OPCO.",
+   "payeur": "L'OPCO en direct pour les entreprises de moins de 50 salariés ; sinon l'entreprise, remboursée ensuite.",
+   "certifications": "Toutes vos formations.",
+   "couleur": "#D97706",
+   "etapes": [
+    [
+     "Demande",
+     "Besoin de l'entreprise, devis."
+    ],
+    [
+     "Convention signée",
+     "Convention de formation avec ses mentions obligatoires."
+    ],
+    [
+     "Accord de l'OPCO",
+     "Montant accordé et circuit de paiement."
+    ],
+    [
+     "En formation",
+     "Convocations, émargement."
+    ],
+    [
+     "Réalisée",
+     "Certificat de réalisation émis."
+    ],
+    [
+     "Facturée",
+     "À l'OPCO ou à l'entreprise selon le circuit."
+    ],
+    [
+     "Payée",
+     "Encaissement."
+    ]
+   ],
+   "pieces": [
+    [
+     "Convention de formation signée",
+     "Entreprise et Kelassy"
+    ],
+    [
+     "Accord de prise en charge de l'OPCO",
+     "OPCO"
+    ],
+    [
+     "Convocations",
+     "Kelassy"
+    ],
+    [
+     "Feuilles d'émargement",
+     "Kelassy"
+    ],
+    [
+     "Certificat de réalisation",
+     "Kelassy"
+    ]
+   ],
+   "delais": [
+    [
+     "Pas de démarrage sans accord de l'OPCO (règle de prudence)",
+     "Règle interne proposée"
+    ],
+    [
+     "Certificat de réalisation émis dans les 5 jours après la fin",
+     "Règle interne proposée"
+    ]
+   ],
+   "automatismes": [
+    "Le bon circuit de paiement est proposé selon l'OPCO et la date d'engagement.",
+    "Alerte si une formation démarre sans accord.",
+    "Certificat de réalisation préparé à partir de l'émargement."
+   ]
+  },
+  {
+   "code": "particulier",
+   "nom": "Particulier qui finance seul",
+   "court": "Particuliers",
+   "une_phrase": "Une personne paie elle-même sa formation.",
+   "payeur": "La personne, jamais avant 10 jours après la signature, avec un acompte de 30 % au plus.",
+   "certifications": "Toutes vos formations.",
+   "couleur": "#DB2777",
+   "etapes": [
+    [
+     "Contrat envoyé",
+     "Contrat de formation et informations préalables (programme, tarifs, règlement intérieur)."
+    ],
+    [
+     "Contrat signé",
+     "Début du délai de rétractation."
+    ],
+    [
+     "Rétractation (10 jours)",
+     "Aucun encaissement possible pendant ce délai."
+    ],
+    [
+     "Acompte reçu",
+     "30 % au plus du prix."
+    ],
+    [
+     "En formation",
+     "Solde échelonné au rythme de la formation."
+    ],
+    [
+     "Soldé",
+     "Formation payée."
+    ]
+   ],
+   "pieces": [
+    [
+     "Contrat de formation signé",
+     "Stagiaire et Kelassy"
+    ],
+    [
+     "Informations préalables remises",
+     "Kelassy"
+    ],
+    [
+     "Échéancier de paiement",
+     "Kelassy"
+    ]
+   ],
+   "delais": [
+    [
+     "Rétractation possible pendant 10 jours après la signature",
+     "L6353-5"
+    ],
+    [
+     "Aucun paiement avant 10 jours, acompte de 30 % au plus",
+     "L6353-6"
+    ]
+   ],
+   "automatismes": [
+    "Tout encaissement est bloqué pendant les 10 jours de rétractation.",
+    "L'acompte est plafonné à 30 %.",
+    "L'échéancier suit le rythme de la formation."
+   ]
+  }
+ ]
+}
