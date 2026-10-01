@@ -36,11 +36,10 @@ window.DEVIS = {
     ],
   },
   echeancier: [
-    { etape: 'À la signature', part: 30, ttc: 1800, ht: 1500 },
-    { etape: 'À la mise à disposition de l’outil pour vos essais', part: 40, ttc: 2400, ht: 2000 },
-    { etape: 'À la validation de la recette', part: 30, ttc: 1800, ht: 1500 },
+    { etape: 'À la signature', part: 50, ttc: 3000, ht: 2500 },
+    { etape: 'À la livraison', part: 50, ttc: 3000, ht: 2500 },
   ],
-  paiementAnnexes: 'Logo, site, domaine et e-mails : 700 € TTC à la mise en ligne du site.',
+  paiementAnnexes: 'Logo, site, domaine et e-mails : 700 € TTC, réglés en totalité à la signature.',
   paiementOptions: 'Options : 50 % à la commande, 50 % à la mise en service. Abonnements : chaque mois, à partir de leur mise en service.',
 
   delai: {

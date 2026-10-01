@@ -270,7 +270,7 @@
       uniqueHT: r2(uniqueTTC / 1.2),
       mensuelTTC: r2(men.reduce((a, o) => a + o.prix, 0)),
       mensuelHT: r2(men.reduce((a, o) => a + (o.base === 'HT' ? o.prixHT : o.ht), 0)),
-      signature: r2(D.echeancier[0].ttc + optionsTTC / 2),
+      signature: r2(D.echeancier[0].ttc + annexes + optionsTTC / 2), // 50 % du logiciel + logo, site, domaine, e-mails + 50 % des options
     };
   }
   function toggle(id) {
@@ -326,7 +326,7 @@
           <h4>Comment vous payez le logiciel</h4>
           <ul class="rows">${D.echeancier.map((e) => `<li><span>${e.part} % ${esc(e.etape.charAt(0).toLowerCase() + e.etape.slice(1))}</span><span>${eur(e.ttc)}</span></li>`).join('')}</ul>
           <p class="price__small">${esc(D.paiementAnnexes)} ${esc(D.paiementOptions)}</p>
-          <p class="price__small">À la signature : <strong>${eur(t.signature)} TTC</strong>${t.optionsTTC ? ' (30 % du logiciel et 50 % des options)' : ' (30 % du logiciel)'}.</p>
+          <p class="price__small">À la signature : <strong>${eur(t.signature)} TTC</strong>${t.optionsTTC ? ' (50 % du logiciel, logo, site, domaine et e-mails, 50 % des options)' : ' (50 % du logiciel, logo, site, domaine et e-mails)'}.</p>
         </div>
       </div>`;
   }
@@ -335,7 +335,7 @@
   const SITE = window.DEVIS_SITE || {}; // { static: true, form: 'https://formsubmit.co/ajax/…' } sur GitHub Pages
   const ACKS = [
     ['perimetre', 'J’ai pris connaissance de ce que comprend le logiciel et de ce qui n’y est pas compris.'],
-    ['conditions', 'J’ai lu les conditions et l’échéancier (30 % du logiciel à la signature, 50 % des options à la commande).'],
+    ['conditions', 'J’ai lu les conditions et l’échéancier (à la signature : 50 % du logiciel, le logo, le site, le domaine et les e-mails ; le solde du logiciel à la livraison).'],
     ['accord', 'J’accepte le devis n° 2026-003 pour le logiciel, le logo, le site, le domaine, les e-mails et les options sélectionnées.'],
   ];
   let mode = store.get('mode', 'valider') === 'demande' ? 'demande' : 'valider';
@@ -450,7 +450,7 @@
       'Sélection': [`Logiciel Odoo Kelassy : ${eur(D.prix.ttc)} TTC (${eur(D.prix.ht)} HT)`, ...D.prix.annexes.map((a) => `${a.titre} : ${eur(a.ttc)} TTC`), ...(opts.length ? opts : ['Aucune option'])].join(' · '),
       'Total': `${eur(t.uniqueTTC)} TTC (${eur(t.uniqueHT)} HT), dont options ${eur(t.optionsTTC)} TTC`,
       'Abonnements': `${eur(t.mensuelTTC)} TTC par mois (${eur(t.mensuelHT)} HT)`,
-      'À la signature': `${eur(t.signature)} TTC (30 % du logiciel${t.optionsTTC ? ' + 50 % des options' : ''}) ; logo, site, domaine et e-mails à la mise en ligne du site`,
+      'À la signature': `${eur(t.signature)} TTC (50 % du logiciel + logo, site, domaine et e-mails${t.optionsTTC ? ' + 50 % des options' : ''}) ; solde du logiciel à la livraison`,
       'Cases cochées': ACKS.map(([k, txt]) => `${p.acks[k] ? '✔' : '✘'} ${txt}`).join(' · '),
       'Message du client': p.commentaire || '(aucun)',
       'Trace': `Devis n° ${D.meta.numero} du ${D.meta.emis} · ${p.heureClient} · ${navigator.userAgent}`,
